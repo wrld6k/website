@@ -1,8 +1,15 @@
 document.addEventListener('DOMContentLoaded', () => {
     const menuToggle = document.getElementById('menu-toggle');
-    const navMenu = document.getElementById('nav-menu');
+    const nav = document.querySelector('nav');
 
     menuToggle.addEventListener('click', () => {
-        navMenu.classList.toggle('show');
+        nav.classList.toggle('show');
+    });
+
+    // Close menu when a link is clicked
+    document.querySelectorAll('nav a').forEach(link => {
+        link.addEventListener('click', () => {
+            nav.classList.remove('show');
+        });
     });
 });
