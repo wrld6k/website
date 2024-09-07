@@ -145,3 +145,23 @@ a::after {
 a:hover::after {
     opacity: 1;
 }
+
+@media (max-width: 768px) {
+    #menu-toggle {
+        display: block;
+    }
+
+    #nav-menu {
+        display: none;
+    }
+
+    #nav-menu.show {
+        display: block;
+    }
+}
+
+@media (min-width: 769px) {
+    #menu-toggle {
+        display: none;
+    }
+}
