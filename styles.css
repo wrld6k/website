@@ -193,6 +193,11 @@ a:hover::after {
     main {
         padding: 1rem;
     }
+
+    /* Hide the donut on mobile devices */
+    #ascii-donut {
+        display: none;
+    }
 }
 
 @media (min-width: 769px) {
