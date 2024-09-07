@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+
+@font-face {
+    font-family: 'Nothing Dot Digital-7';
+    src: url('fonts/NothingDotDigital-7.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'Nothing Dot Digital-7', 'Space Mono', monospace;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    color: #fff;
+}
+
+header {
+    background-color: #111;
+    padding: 1rem;
+    border-bottom: 1px solid #333;
+    position: relative;
+    padding-left: 100px; /* Make room for the donut */
+    z-index: 1001; /* Ensure header is above the donut */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+nav ul li a:hover {
+    color: #ccc;
+}
+
+main {
+    padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+section {
+    margin-bottom: 40px;
+    position: relative;
+}
+
+section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -20px;
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+    border-radius: 50%;
+}
+
+h2 {
+    color: #fff;
+    border-bottom: 1px solid #333;
+    padding-bottom: 10px;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+}
+
+footer {
+    background-color: #111;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    border-top: 1px solid #333;
+    font-size: 0.8rem;
+}
+
+/* Remove the static dot matrix background */
+body::before {
+    content: none;
+}
+
+/* Add a canvas for the animated background */
+#matrix-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+/* Subtle hover effect */
+a, button {
+    transition: all 0.3s ease;
+}
+
+a:hover, button:hover {
+    text-shadow: 0 0 5px rgba(255,255,255,0.5);
+}
+
+/* Add a glow effect to links */
+a {
+    color: #fff;
+    text-decoration: none;
+    position: relative;
+}
+
+a::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #fff;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+a:hover::after {
+    opacity: 1;
+}
